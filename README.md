@@ -44,13 +44,13 @@ TASK-EMPLOYEE MANAGER is an application that allows the management of tasks and 
 - View Add Task page
 - View Logout page
 
-#### non-Authenticated Logged-in employee
+#### non-Authorized Logged-in employee
 
 - View Tasks page with "status" and "info" functionality
 - View Employees page with "status" and "info" functionality
 - View Info page without functionality
 
-#### Authenticated Logged-in employee
+#### Authorized Logged-in employee
 
 - View Tasks page with full("edit", "delete") functionality
 - View Employees page with full("edit", "delete") functionality
