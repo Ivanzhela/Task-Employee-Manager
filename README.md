@@ -1,7 +1,7 @@
 
 # TASK-EMPLOYEE MANAGER
 
-TASK-EMPLOYEE MANAGER is an application that allows the management of tasks and employees. Each registered employee can create, update or delete their created tasks, as well as their profile. It is easy to track the tasks of each employee that they have started and what status they have - in progress or completed.
+TASK-EMPLOYEE MANAGER is an application that allows the management of tasks and employees. Each registered employee can create, update or delete their created tasks, as well as their profile. It is easy to track the tasks each employee has started and the status they are at - in progress or completed.
 
 ## Start the app
 
