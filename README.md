@@ -5,9 +5,9 @@ TASK-EMPLOYEE MANAGER is an application that allows the management of tasks and 
 
 ## Start the app
 
--open TERMINAL
--npm i
--npm start
+- open TERMINAL<br />
+- npm i<br />
+- npm start<br />
 
 ## Architecture
 
