@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.png" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Task Manager</title>
+</head>
+
+<body>
+
+    {{#if error}}
+
+    <div class="errorContainer">
+        <p>{{error}}</p>
+    </div>
+
+    {{/if}}
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+
+                <div class="nav-links">
+                    <ul class="nav-group">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="/images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="left">
+                            <li class="nav-item left">
+                                <a href="/tasks/list">
+                                    <i>Tasks</i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item left">
+                                <a href="/employees/list">
+                                    <i>Employees</i>
+                                </a>
+                            </li>
+                        </div>
+
+                        <div class="right">
+                            {{#if user}}
+                            <li class="nav-item">
+                                <a href="/tasks/create">
+                                    <i>Add Task</i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/employees/details/{{user._id}}">
+                                    <i>Profile</i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/auth/logout">
+                                    <i>Logout</i>
+                                </a>
+                            </li>
+                            {{else}}
+                            <li class="nav-item">
+                                <a href="/auth/login">
+                                    <i>Login</i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/auth/register">
+                                    <i>Register</i>
+                                </a>
+                            </li>
+                            {{/if}}
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main">
+
+        {{{body}}}
+
+    </main>
+
+    <div class="footer">
+        <p>Task Employee Manager</p>
+    </div>
+
+</body>
+
+</html>

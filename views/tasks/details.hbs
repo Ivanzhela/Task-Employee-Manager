@@ -1,0 +1,33 @@
+<div class="modal">
+    <div class="detail-container">
+        <header class="headers">
+            <h2>Task Detail</h2>
+
+        </header>
+        <div class="content">
+            <div class="content-details">
+                <p>Title: <strong> {{title}} </strong></p>
+                <p>Description: <strong>{{description}}</strong></p>
+                <p>Status: <strong>{{status}}</strong></p>
+                <p>Asignee: <strong>{{asignee.fullName}}</strong></p>
+                <p>Created on: <strong>{{createdOn}}</strong></p>
+                <p>Due Date: <strong>{{dueDate}}</strong></p>
+                <p>Owner: <strong>{{owner.fullName}}</strong></p>
+            </div>
+        </div>
+        {{#if isCreator}}
+        <div class="actions">
+            <button class="btn edit-btn">
+                <a href="/tasks/edit/{{_id}}">
+                    <i class='fas fa-edit'></i>
+                </a>
+            </button>
+            <button class="btn delete-btn">
+                <a href="/tasks/delete/{{_id}}">
+                    <i class='fas fa-trash-alt'></i>
+                </a>
+            </button>
+        </div>
+        {{/if}}
+    </div>
+</div>

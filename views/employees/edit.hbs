@@ -1,0 +1,37 @@
+<div class="modal">
+    <div class="action-container">
+        <header class="headers">
+            <h2>Edit Profile</h2>
+        </header>
+        <form method="post">
+            <label htmlFor="fullName">Full name</label>
+            <div class="input-wrapper">
+                <input id="fullName" name="fullName" type="text" value="{{fullName}}"/>
+            </div>
+
+            <label htmlFor="email">Email</label>
+            <div class="input-wrapper">
+                <input id="email" name="email" type="email" value="{{email}}"/>
+            </div>
+
+            <label htmlFor="phoneNumber">Phone number</label>
+            <div class="input-wrapper">
+                <input id="phoneNumber" name="phoneNumber" type="text" value="{{phoneNumber}}"/>
+            </div>
+
+            <label htmlFor="dateOfBirth">Date of Birth</label>
+            <div class="input-wrapper">
+                <input id="dateOfBirth" name="dateOfBirth" type="date" value="{{dateOfBirth}}"/>
+            </div>
+
+            <label htmlFor="salary">Salary</label>
+            <div class="input-wrapper">
+                <input id="salary" name="salary" type="text" value="{{salary}}"/>
+            </div>
+
+            <div id="form-actions">
+                <button id="action-save" class="btn" type="submit">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>

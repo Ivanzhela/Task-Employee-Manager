@@ -1,0 +1,32 @@
+<div class="welcome-content">
+    <div class="statistic-content">
+        <h1 class="employee">Employees with the most completed tasks</h1>
+        {{#if sortedEmpl}}
+        {{#each sortedEmpl}}
+        <div class="statistic-card">
+            <a href="/employees/details/{{_id}}">
+                <p>Name: </p>
+                <h3>{{fullName}}</h3>
+                <p>Completed tasks: </p>
+                <h3 style="color:red; font-size:x-large">{{tasks}}</h3>
+            </a>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+    <div class="statistic-content">
+        <h1 class="task">Tasks with an upcoming deadline</h1>
+        {{#if sortedExtrTasks}}
+        {{#each sortedExtrTasks}}
+        <div class="statistic-card">
+            <a href="/tasks/details/{{_id}}">
+                <p>Title: </p>
+                <h3>{{title}}</h3>
+                <p>Due Date: </p>
+                <h3 style="color: blue;">{{dueDate}}</h3>
+            </a>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+</div>

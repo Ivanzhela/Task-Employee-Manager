@@ -1,0 +1,67 @@
+<section class="card list-container">
+    <div class="table-wrapper">
+        <div class="info-bar">
+            <h2>
+                <span>Employees</span>
+            </h2>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Full Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Phone Number
+
+                    </th>
+                    <th>
+                        Date of Birth
+
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if employees}}
+                {{#each employees}}
+                <tr>
+                    <td>{{fullName}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phoneNumber}}</td>
+                    <td>{{dateOfBirth}}</td>
+                    <td>{{salary}}</td>
+                    <td class="actions">
+                        {{#if isAuth}}
+                        <button class="btn edit-btn">
+                            <a href="/employees/edit/{{_id}}">
+                                <i class='fas fa-edit'></i>
+                            </a>
+                        </button>
+                        <button class="btn delete-btn">
+                            <a href="/employees/delete/{{_id}}">
+                                <i class='fas fa-trash-alt'></i>
+                            </a>
+                        </button>
+                        {{/if}}
+                        <button class="btn info-btn">
+                            <a href="/employees/details/{{_id}}">
+                                <i class='fas fa-info-circle'></i>
+                            </a>
+
+                        </button>
+                    </td>
+                </tr>
+                {{/each}}
+                {{/if}}
+            </tbody>
+        </table>
+
+    </div>
+</section>

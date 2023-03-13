@@ -1,0 +1,28 @@
+<div class="modal">
+    <div class="action-container">
+        <header class="headers">
+            <h2>Edit Task</h2>
+        </header>
+        <form method="post">
+            <label to="title">Title</label>
+            <div class="input-wrapper">
+                <input id="title" name="title" type="text" value="{{title}}"/>
+            </div>
+            <label to="description">Description</label>
+            <div class="input-wrapper">
+                <input id="description" name="description" type="description" value="{{description}}"/>
+            </div>
+
+
+            <label to="dueDate">Due date</label>
+            <div class="input-wrapper">
+                <input id="dueDate" name="dueDate" type="date" value="{{dueDate}}"/>
+            </div>
+
+
+            <div id="form-actions">
+                <button id="action-save" class="btn" type="submit">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>

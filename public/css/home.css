@@ -1,0 +1,176 @@
+.welcome-content {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  width: 100%;
+}
+
+.statistic-content {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.employee {
+  color:rgb(208, 72, 72);
+}
+.task {
+  color: #2896ff;
+}
+.statistic-content h1 {
+  font-size: 28px;
+  padding-top: 20px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  align-items: center;
+  background-color: #24292f;
+}
+
+.statistic-card {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  margin: 2px;
+  background-color:rgba(199, 198, 198, 0.3);
+}
+
+.statistic-card a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 20px;
+}
+
+.statistic-card a p {
+
+  height: 100%;
+  text-align: center;
+  padding: 30px 0px 0 20px;
+  font-size: larger;
+
+}
+
+.statistic-card a h3 {
+  width: 35%;
+  max-width: 35%;
+  max-height: 80px;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+h1.bold-welcome {
+  font-weight: 800;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #24292f;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.container {
+  padding: 15px 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item a i {
+  color: white;
+
+}
+
+.nav-group .nav-item {
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+.nav-group .nav-item a {
+  font-size: 22px;
+  display: block;
+  color: #24292f;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-group div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-group .right {
+  position: absolute;
+  right: 10%;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  background: #24292f;
+
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
+
+.errorContainer {
+  position: fixed;
+  right: 100px;
+  min-width: 100px;
+  display: block;
+  z-index: 11111;
+  top: 100px;
+  text-align: center;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  height: auto;
+  width: 320px;
+  box-shadow: 0 5px 10px black;
+}
+
+.errorContainer > p {
+  background: gray;
+  font-size: 20px;
+  padding: 20px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.errorContainer {
+  -moz-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 2s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}

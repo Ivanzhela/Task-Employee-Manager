@@ -1,0 +1,45 @@
+<div class="modal">
+    <div class="detail-container">
+        <header class="headers">
+            <h2>Employee Detail</h2>
+
+        </header>
+        <div class="content">
+            <div class="content-details">
+                <p>Full Name: <strong> {{fullName}} </strong></p>
+                <p>Email: <strong>{{email}}</strong></p>
+                <p>Phone Number: <strong>{{phoneNumber}}</strong></p>
+                <p>Date of Birth: <strong>{{dateOfBirth}}</strong></p>
+                <p>Salary: <strong>{{salary}}</strong></p>
+                <p>Tasks:
+                    {{#if tasks}}
+                    {{#each tasks}}
+                    <a href="/tasks/details/{{_id}}"><strong>{{title}}, </strong></a>
+                    {{/each}}
+                    {{/if}}
+                </p>
+                <p>Owner Tasks:
+                    {{#if ownerTasks}}
+                    {{#each ownerTasks}}
+                    <a href="/tasks/details/{{_id}}"><strong>{{title}}, </strong></a>
+                    {{/each}}
+                    {{/if}}
+                </p>
+            </div>
+        </div>
+        {{#if isEmployee}}
+        <div class="actions">
+            <button class="btn edit-btn">
+                <a href="/tasks/edit/{{_id}}">
+                    <i class='fas fa-edit'></i>
+                </a>
+            </button>
+            <button class="btn delete-btn">
+                <a href="/tasks/delete/{{_id}}">
+                    <i class='fas fa-trash-alt'></i>
+                </a>
+            </button>
+        </div>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<section class="card list-container">
+    <div class="table-wrapper">
+        <div class="info-bar">
+            <h2>
+                <span>Tasks</span>
+            </h2>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Status
+
+                    </th>
+                    <th>
+                        Asignee
+
+                    </th>
+                    <th>
+                        Due date
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if tasks}}
+                {{#each tasks}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td class="actions">
+                        {{#if isDisable}}
+                        <button class="btn status-btn" disabled="true">{{status}}</button>
+                        {{else}}
+                        <button class="btn status-btn"> <a href="/tasks/status/{{_id}}">{{status}}</a></button>
+                        {{/if}}
+                        </td>
+                    <td>{{asignee.fullName}}</td>
+                    <td>{{dueDate}}</td>
+                    <td class="actions">
+                        {{#if isAuth}}
+                        <button class="btn edit-btn">
+                            <a href="/tasks/edit/{{_id}}">
+                                <i class='fas fa-edit'></i>
+                            </a>
+                        </button>
+                        <button class="btn delete-btn">
+                            <a href="/tasks/delete/{{_id}}">
+                                <i class='fas fa-trash-alt'></i>
+                            </a>
+                        </button>
+                        {{/if}}
+                        <button class="btn info-btn">
+                            <a href="/tasks/details/{{_id}}">
+                                <i class='fas fa-info-circle'></i>
+                            </a>
+                        </button>
+                    </td>
+                </tr>
+                {{/each}}
+                {{/if}}
+            </tbody>
+        </table>
+
+    </div>
+    {{#if user}}
+    <button class="btn-add btn"><a href="/tasks/create">Add new task</a></button>
+    {{/if}}
+</section>
